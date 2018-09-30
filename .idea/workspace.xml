@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="41911aaa-c56d-4fa1-90c6-32e742c3ccf4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../app/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../app/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +65,7 @@
           <entry key="html" value="19" />
           <entry key="jpeg" value="2" />
           <entry key="jpg" value="1" />
-          <entry key="py" value="30" />
+          <entry key="py" value="32" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
@@ -75,25 +75,38 @@
           <entry key="HTML" value="19" />
           <entry key="Image" value="3" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="30" />
+          <entry key="Python" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="1121" />
-          <entry key="py" value="451" />
+          <entry key="py" value="452" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1121" />
-          <entry key="Python" value="451" />
+          <entry key="Python" value="452" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../app/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="27" column="58" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="58" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+                <marker date="1538267978320" expanded="true" signature="564:566" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../app/models.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -106,11 +119,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../app/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+            <state relative-caret-position="375">
+              <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../app/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="66" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
+              <folding>
+                <element signature="e#0#94#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,13 +169,13 @@
         <option value="$PROJECT_DIR$/../app/templates/about.html" />
         <option value="$PROJECT_DIR$/../virtual/lib64/python3.6/site-packages/django/views/i18n.py" />
         <option value="$PROJECT_DIR$/../app/templates/filter.html" />
-        <option value="$PROJECT_DIR$/../app/urls.py" />
         <option value="$PROJECT_DIR$/../app/templates/search.html" />
         <option value="$PROJECT_DIR$/../app/views.py" />
         <option value="$PROJECT_DIR$/../app/templates/navbar.html" />
         <option value="$PROJECT_DIR$/../app/templates/welcome.html" />
         <option value="$PROJECT_DIR$/../app/models.py" />
         <option value="$PROJECT_DIR$/../app/tests.py" />
+        <option value="$PROJECT_DIR$/../app/urls.py" />
       </list>
     </option>
   </component>
@@ -479,17 +507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="27" column="58" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <marker date="1538267978320" expanded="true" signature="564:566" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../app/templates/search.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -525,16 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../app/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#94#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../app/templates/filter.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -559,8 +566,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../app/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+        <state relative-caret-position="375">
+          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="27" column="58" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1538267978320" expanded="true" signature="564:566" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../app/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="66" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#94#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
