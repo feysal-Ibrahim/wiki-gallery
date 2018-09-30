@@ -9,7 +9,7 @@ from peewee import DoesNotExist
 def home(request):
     # return render ( request , 'welcome.html')
     # gallery=Image.get_all( )
-    images=Image.objects.filter( ).order_by( 'category' )
+    images=Image.objects.filter( ).order_by( 'location' )
     date=dt.date.today
     return render( request , 'welcome.html' ,
                    {"date": date , "images": images} )
@@ -25,12 +25,12 @@ def single_image(request , image_id):
 
 
 def search_results(request):
-    if 'category' in request.GET and request.GET["category"]:
-        search_term=request.GET.get( "category" )
-        searched_category=Image.search_by_category( search_term )
+    if 'location' in request.GET and request.GET["location"]:
+        search_term=request.GET.get( "location" )
+        searched_location=Image.search_by_location( search_term )
         message=f"{search_term}"
 
-        return render( request , 'search.html' , {"message": message , "categorys": searched_category} )
+        return render( request , 'search.html' , {"message": message , "location": searched_location} )
 
     else:
         message="You haven't searched for any term"
