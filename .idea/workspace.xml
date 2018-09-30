@@ -3,7 +3,29 @@
   <component name="ChangeListManager">
     <list default="true" id="41911aaa-c56d-4fa1-90c6-32e742c3ccf4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gallery/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../gallery/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gallery/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../gallery/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gallery/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../gallery/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../picture/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../picture/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../picture/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../picture/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../picture/migrations/0002_auto_20180929_2347.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../picture/migrations/0003_auto_20180930_0015.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../picture/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../picture/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../picture/templates/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../picture/templates/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../picture/templates/filter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../picture/templates/navbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../picture/templates/search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../picture/templates/sudan.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../picture/templates/welcome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../picture/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../picture/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../picture/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +88,7 @@
           <entry key="html" value="33" />
           <entry key="jpeg" value="2" />
           <entry key="jpg" value="1" />
-          <entry key="py" value="48" />
+          <entry key="py" value="49" />
           <entry key="sqlite3" value="1" />
           <entry key="txt" value="5" />
         </counts>
@@ -77,7 +99,7 @@
           <entry key="HTML" value="33" />
           <entry key="Image" value="3" />
           <entry key="PLAIN_TEXT" value="8" />
-          <entry key="Python" value="48" />
+          <entry key="Python" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -85,7 +107,7 @@
           <entry key="Procfile" value="7" />
           <entry key="env" value="4" />
           <entry key="html" value="1155" />
-          <entry key="py" value="541" />
+          <entry key="py" value="544" />
           <entry key="txt" value="9" />
         </counts>
       </usages-collector>
@@ -93,7 +115,7 @@
         <counts>
           <entry key="HTML" value="1155" />
           <entry key="PLAIN_TEXT" value="20" />
-          <entry key="Python" value="541" />
+          <entry key="Python" value="544" />
         </counts>
       </usages-collector>
     </session>
@@ -123,11 +145,7 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -135,15 +153,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="26" selection-start-column="26" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../picture/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="148" selection-start-line="4" selection-start-column="148" selection-end-line="4" selection-end-column="148" />
             </state>
           </provider>
         </entry>
@@ -160,8 +169,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../gallery/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-310">
-              <caret line="87" column="26" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
+            <state relative-caret-position="-1095">
+              <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
               <folding>
                 <element signature="e#309#318#0" expanded="true" />
               </folding>
@@ -173,7 +182,7 @@
         <entry file="file://$PROJECT_DIR$/../gallery/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+              <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
               <folding>
                 <element signature="e#641#760#0" expanded="true" />
               </folding>
@@ -183,18 +192,19 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../gallery/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../app/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+            <state relative-caret-position="315">
+              <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
               <folding>
                 <element signature="e#22#31#0" expanded="true" />
               </folding>
@@ -236,13 +246,14 @@
         <option value="$PROJECT_DIR$/../app/templates/welcome.html" />
         <option value="$PROJECT_DIR$/../Procfile" />
         <option value="$PROJECT_DIR$/../.env" />
-        <option value="$PROJECT_DIR$/../requirements.txt" />
         <option value="$PROJECT_DIR$/../runtime.txt" />
-        <option value="$PROJECT_DIR$/../gallery/settings.py" />
-        <option value="$PROJECT_DIR$/../gallery/urls.py" />
         <option value="$PROJECT_DIR$/../picture/__init__.py" />
-        <option value="$PROJECT_DIR$/../gallery/__init__.py" />
         <option value="$PROJECT_DIR$/../manage.py" />
+        <option value="$PROJECT_DIR$/../gallery/urls.py" />
+        <option value="$PROJECT_DIR$/../gallery/settings.py" />
+        <option value="$PROJECT_DIR$/../requirements.txt" />
+        <option value="$PROJECT_DIR$/../gallery/__init__.py" />
+        <option value="$PROJECT_DIR$/../app/__init__.py" />
       </list>
     </option>
   </component>
@@ -270,12 +281,7 @@
             <path>
               <item name="." type="b2602c69:ProjectViewProjectNode" />
               <item name="gallery" type="462c0819:PsiDirectoryNode" />
-              <item name="gallery" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="." type="b2602c69:ProjectViewProjectNode" />
-              <item name="gallery" type="462c0819:PsiDirectoryNode" />
-              <item name="picture" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -561,9 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../app/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -667,39 +670,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../gallery/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
           <folding>
             <element signature="e#224#233#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../gallery/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-          <folding>
-            <element signature="e#641#760#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../gallery/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-310">
-          <caret line="87" column="26" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
-          <folding>
-            <element signature="e#309#318#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -711,13 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../picture/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -725,22 +694,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../gallery/__init__.py">
+    <entry file="file://$PROJECT_DIR$/../gallery/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        <state relative-caret-position="300">
+          <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+          <folding>
+            <element signature="e#641#760#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gallery/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1095">
+          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding>
+            <element signature="e#309#318#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        <state relative-caret-position="315">
+          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
           <folding>
             <element signature="e#22#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gallery/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
