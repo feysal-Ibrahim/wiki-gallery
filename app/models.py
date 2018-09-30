@@ -28,7 +28,7 @@ class Category(models.Model):
 
 
     def update_category(self):
-        self.update( )
+        self.update()
 
 
     def __str__(self):
