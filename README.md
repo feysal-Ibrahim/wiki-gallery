@@ -32,3 +32,8 @@ The following are needed for the application to run on a local computer:
 The application cannot be run in any version of python lower than 3.6 because you will come across many errors
 
 ## CREDITS
+1. **_`SAM NGINGI`_**
+2. **_`CYNTHIA KASAMBULI`_**
+3. **_`BOYD NDONGA`_**
+4. **_`Google`_**
+5. **_`Stack Overflow `_**
