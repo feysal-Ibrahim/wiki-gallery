@@ -7,10 +7,14 @@
       {% if categorys %}
         <h2>Found {{ categorys|length }} of searched term {{message}}</h2>
       {% else %}
+           <br>
+     <br>
         <h2> Found 0 category for the search term {{message}}</h2>
       {% endif %}
 
     </div>
+    <br>
+     <br>
 
      {% if categorys %} {% for category in categorys %}
       <div class="row">
