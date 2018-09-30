@@ -6,13 +6,13 @@ from peewee import DoesNotExist
 
 
 # Create your view functios  here.
-# def home(request):
-#     # return render ( request , 'welcome.html')
-#     # gallery=Image.get_all( )
-#     images = Image.objects.filter().order_by('category')
-#     date=dt.date.today
-#     return render( request , 'welcome.html' ,
-#                    {"date": date , "images": images } )
+def home(request):
+    # return render ( request , 'welcome.html')
+    # gallery=Image.get_all( )
+    images=Image.objects.filter( ).order_by( 'category' )
+    date=dt.date.today
+    return render( request , 'welcome.html' ,
+                   {"date": date , "images": images} )
 
 
 def about(request):
@@ -35,6 +35,3 @@ def search_results(request):
     else:
         message="You haven't searched for any term"
         return render( request , 'search.html' , {"message": message} )
-
-
-
