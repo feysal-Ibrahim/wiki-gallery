@@ -1,77 +1,77 @@
-{%extends 'base.html'%}
+<!--{%extends 'base.html'%}-->
 
-{% block content %}
-{{block.super}}
+<!--{% block content %}-->
+<!--{{block.super}}-->
 
-<div class="container">
-    <div class="row">
+<!--<div class="container">-->
+    <!--<div class="row">-->
 
-    {% for galleries in images %}
-    <!--&lt;!&ndash; Modal &ndash;&gt;-->
-    <!--<div class="modal fade" id="{{galleries.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">-->
-      <!--<div class="modal-dialog modal-dialog-centered" role="document">-->
-        <!--<div class="modal-content">-->
-          <!--<div class="modal-header">-->
-            <!--<h5 class="modal-title" id="exampleModalLongTitle">{{galleries.image_name}}</h5>-->
-            <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
-              <!--<span aria-hidden="true">&times;</span>-->
-            <!--</button>-->
-          <!--</div>-->
-          <!--<div class="modal-body">-->
-            <!--<img data-toggle="modal" data-target="{{galleries.id}}" src="{{galleries.image.url}}" class="img-fluid img-thumbnail rounded" alt="Responsive image" >-->
-          <!--</div>-->
-          <!--<div class="modal-footer">-->
-            <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
-            <!--<span><button type="button"  class="btn btn-primary">Copy Link</button><input class="form-control" type="text" value="{{galleries.image_url}}" id="">-->
-            <!--<a onclick="myFunction()"></a></span>-->
-          <!--</div>-->
+    <!--{% for galleries in images %}-->
+    <!--&lt;!&ndash;&lt;!&ndash; Modal &ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="modal fade" id="{{galleries.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">&ndash;&gt;-->
+      <!--&lt;!&ndash;<div class="modal-dialog modal-dialog-centered" role="document">&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="modal-content">&ndash;&gt;-->
+          <!--&lt;!&ndash;<div class="modal-header">&ndash;&gt;-->
+            <!--&lt;!&ndash;<h5 class="modal-title" id="exampleModalLongTitle">{{galleries.image_name}}</h5>&ndash;&gt;-->
+            <!--&lt;!&ndash;<button type="button" class="close" data-dismiss="modal" aria-label="Close">&ndash;&gt;-->
+              <!--&lt;!&ndash;<span aria-hidden="true">&times;</span>&ndash;&gt;-->
+            <!--&lt;!&ndash;</button>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--&lt;!&ndash;<div class="modal-body">&ndash;&gt;-->
+            <!--&lt;!&ndash;<img data-toggle="modal" data-target="{{galleries.id}}" src="{{galleries.image.url}}" class="img-fluid img-thumbnail rounded" alt="Responsive image" >&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--&lt;!&ndash;<div class="modal-footer">&ndash;&gt;-->
+            <!--&lt;!&ndash;<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>&ndash;&gt;-->
+            <!--&lt;!&ndash;<span><button type="button"  class="btn btn-primary">Copy Link</button><input class="form-control" type="text" value="{{galleries.image_url}}" id="">&ndash;&gt;-->
+            <!--&lt;!&ndash;<a onclick="myFunction()"></a></span>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+    <!--<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 ">-->
+      <!--<br>-->
+      <!--<div class="card">-->
+        <!--<a href="#" class="thumbnail">-->
+          <!--<img data-toggle="modal" data-target="{{galleries.id}}" src="{{galleries.image.url}}" class="img-fluid img-thumbnail rounded" alt="Responsive image" >-->
+        <!--</a>-->
+        <!--<div class="card-body">-->
+          <!--<p class="card-text">{{galleries.description}}</p>-->
+          <!--<input class="form-control" type="text" value="{{galleries.image_url}}" id="link">-->
+          <!--<a onclick="myFunction()"><button type="button"  class="btn btn-success">Copy Link</button></a>-->
+            <!--<button type="button"  class="btn btn-primary"><a href="{% url 'search_results'%}" style="color:white;">view</a></button>-->
+
         <!--</div>-->
       <!--</div>-->
     <!--</div>-->
+    <!--{% endfor %}-->
 
-    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 ">
-      <br>
-      <div class="card">
-        <a href="#" class="thumbnail">
-          <img data-toggle="modal" data-target="{{galleries.id}}" src="{{galleries.image.url}}" class="img-fluid img-thumbnail rounded" alt="Responsive image" >
-        </a>
-        <div class="card-body">
-          <p class="card-text">{{galleries.description}}</p>
-          <input class="form-control" type="text" value="{{galleries.image_url}}" id="link">
-          <a onclick="myFunction()"><button type="button"  class="btn btn-success">Copy Link</button></a>
-            <button type="button"  class="btn btn-primary"><a href="{% url 'search_results'%}" style="color:white;">view</a></button>
+  <!--</div>-->
+<!--</div>-->
 
-        </div>
-      </div>
-    </div>
-    {% endfor %}
+<!--<style>-->
+   <!--.thumbnail img{-->
+    <!--position: relative;-->
+    <!--width:  300px;-->
+    <!--height: 300px;-->
+    <!--background-position: 50% 50%;-->
+    <!--background-repeat:   no-repeat;-->
+    <!--background-size:     cover;-->
+     <!--border: 1px solid yellow;-->
+      <!--background: orange;-->
+<!--}-->
+    <!--.card {-->
+    <!--box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);-->
+    <!--transition: 0.3s;-->
+<!--}-->
 
-  </div>
-</div>
-
-<style>
-   .thumbnail img{
-    position: relative;
-    width:  300px;
-    height: 300px;
-    background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     cover;
-     border: 1px solid yellow;
-      background: orange;
-}
-    .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-
-    .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-    .container {
-    padding: 2px 16px;
-}
+    <!--.card:hover {-->
+    <!--box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);-->
+<!--}-->
+    <!--.container {-->
+    <!--padding: 2px 16px;-->
+<!--}-->
 
 
-</style>
-{% endblock %}
+<!--</style>-->
+<!--{% endblock %}-->
