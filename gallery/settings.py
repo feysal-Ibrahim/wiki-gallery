@@ -19,7 +19,7 @@ DEBUG=config( 'DEBUG' , default=False , cast=bool )
 if config( 'MODE' ) == "dev":
     DATABASES={
         'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'ENGINE': 'django.db.backends.postgresql_psycopg2' ,
             'NAME': config( 'DB_NAME' ) ,
             'USER': config( 'DB_USER' ) ,
             'PASSWORD': config( 'DB_PASSWORD' ) ,
@@ -70,6 +70,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -153,8 +154,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-
+# Configure Django App for Heroku.
 django_heroku.settings(locals())
