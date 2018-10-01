@@ -23,6 +23,11 @@
         <a href="#" class="thumbnail">
         <img data-toggle="modal" src="{{ category.image.url }}" class="img-responsive">
         </a>
+             {% empty %}
+        <div class="row">
+            <h2 class="text-center">DONT WORRY I AM  ARE ALSO FEELING</h2>
+        </div>
+    </div>
             {% endfor %} {% endif %}
     </div>
 </div>

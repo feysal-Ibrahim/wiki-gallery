@@ -1,46 +1,71 @@
-{% extends 'base.html' %}
-
+{%extends 'base.html'%}
 {% block content %}
-{{block.super}}
 
-    <div class="container">
-        <!-- Looping through photos   -->
-        {% for images in images %}
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <p>{{images.name}}</p>
-            <img src="{{images.image.url}}" class="img-responsive" alt="Image" data-toggle="modal" data-target="#myModal">
-            <div class="modal fade" id="myModal" role="dialog">
-                    <div class="modal-dialog">
+<div class="container">
 
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title"></h4>
-                        </div>
-                        <div class="modal-body">
-                        <p>{{ images.description }}</p>
-                        <p> </p>
-                        <h2 class="text-center">{{ images.name }}</h2>
-                        <img src="{{images.image.url}}">
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
+    <div class="row">
+      {%if location%}
 
-                    </div>
-                </div>
+        <h2>Location: {{location.location}}</h2>
+        <hr>
+        {%else%}
+           <h2>Category: {{category.category}}</h2>
+           <hr>
+        {%endif%}
 
-                </div>
-        </div>
-
-
-        {% empty %}
-        <div class="row">
-            <h2 class="text-center">There Are No Images To Display</h2>
-        </div>
-        {% endfor %}
     </div>
 
+    <div class="row">
+      {%if images%}
+
+    {%for image in images%}
+         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 ">
+
+      <div class="modal fade" id="myModal-{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">{{ image.image_name }}</h4>
+          </div>
+           <div class="card">
+        <a href="#" class="thumbnail">
+            <img src="{{image.image.url}}" alt="{{ image.image_name }}">
+        </a>
+          </div>
+           <div class="container">
+            <p>Image Details</p>
+              <p>{{image.description}}</p>
+            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="col-md-3">
+
+           <div class="hovereffect thumbnail">
+              <img class="img-responsive" src="{{image.image.url}}" alt="">
+              <div class="overlay">
+                 <h2>{{ image.image_name }}</h2>
+                <button> <a class="info" href="#" data-toggle="modal" data-target="#myModal-{{image.id}}">View details</a></button>
+              </div>
+          </div>
+            <p> <a class="btn btn-sm btn-success" href="#" data-clipboard-text="http://localhost:8000{{image.image.url}}">Copy Image Link</a></p>
+
+      </div>
+    {%endfor%}
+    {%else%}
+      {%if location%}
+        <h2>No Images in this location yet!</h2>
+      {%else%}
+        <h2>No Images in this category yet!</h2>
+      {%endif%}
+    {%endif%}
+
+    </div>
+</div>
 {% endblock %}
