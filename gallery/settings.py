@@ -61,9 +61,9 @@ STATICFILES_DIRS = (
 SECRET_KEY = 'a!1$ggiy=1-c1r_^kjse(sj)@7pri-kiruq03z%07pz*ue4cm@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['feysal-gallery.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
