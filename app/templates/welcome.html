@@ -20,6 +20,7 @@
           <input class="form-control" type="text" value="{{galleries.image_url}}" id="link">
           <p> <a class="btn btn-sm btn-success" href="#" data-clipboard-text="http://localhost:8000{{image.image.url}}">Copy Image Link</a></p>
              <button type="button"  class="btn btn-primary"><a href="{% url 'search_results'%}" style="color:white;">view</a></button>
+                       <br>
                       Location: <p class="card-text" >{{galleries.location}}</p>
                        Category:<p class="card-text">{{galleries.category}}</p>
                        posted:<p class="card-text">{{galleries.posted_time}}</p>
