@@ -1,4 +1,4 @@
-#!/home/feisal/gallery/virtual/bin/python
+#!/home/feisal/gallery/virtual/bin/python2
 from django.core import management
 
 if __name__ == "__main__":
