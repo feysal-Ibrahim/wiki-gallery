@@ -19,7 +19,7 @@ DEBUG=config( 'DEBUG' , default=False , cast=bool )
 if config( 'MODE' ) == "dev":
     DATABASES={
         'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2' ,
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': config( 'DB_NAME' ) ,
             'USER': config( 'DB_USER' ) ,
             'PASSWORD': config( 'DB_PASSWORD' ) ,
@@ -106,7 +106,7 @@ WSGI_APPLICATION = 'gallery.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql' ,
+        'ENGINE': 'django.db.backends.postgresql psycopg2' ,
         'NAME': 'gallery' ,
         'USER': 'feisal' ,
         'PASSWORD': '1234' ,
@@ -155,3 +155,6 @@ STATICFILES_DIRS = [
 ]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+django_heroku.settings(locals())
