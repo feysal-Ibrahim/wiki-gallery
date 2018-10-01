@@ -26,6 +26,33 @@
     {% block content %}
 
     {%endblock%}
-
+{% block scripts %}
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <script type="text/javascript">
+         $(document).ready(function () {
+           $('img').on('click', function () {
+               var image = $(this).attr('src');
+               //alert(image);
+               $('#myModal').on('show.bs.modal', function () {
+                   $(".showimage").attr("src", image);
+               });
+           });
+        });
+       </script>
+       <script type="text/javascript" src="{% static 'js/clipboard.min.js'%}"></script>
+       <script type="text/javascript">
+          var clipboard = new ClipboardJS('.btn');
+          clipboard.on('success', function(e) {
+              console.info('Action:', e.action);
+              console.info('Text:', e.text);
+              console.info('Trigger:', e.trigger);
+              e.clearSelection();
+          });
+          clipboard.on('error', function(e) {
+              console.error('Action:', e.action);
+              console.error('Trigger:', e.trigger);
+          });
+       </script>
+    {%endblock%}
   </body>
 </html>

@@ -8,16 +8,21 @@
 
     {% for galleries in images %}
         <!-- Trigger the Modal -->
+
          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 ">
               <div class="card">
         <a href="#" class="thumbnail">
     <img id="myImg" src="{{galleries.image.url}}" alt="Preety" style="width:100%;max-width:300px">
+
         </a>
                    <div class="card-body">
           <p class="card-text">{{galleries.description}}</p>
           <input class="form-control" type="text" value="{{galleries.image_url}}" id="link">
-          <a onclick="myFunction()"><button type="button"  class="btn btn-success">Copy Link</button></a>
-            <button type="button"  class="btn btn-primary"><a href="{% url 'search_results'%}" style="color:white;">view</a></button>
+          <p> <a class="btn btn-sm btn-success" href="#" data-clipboard-text="http://localhost:8000{{image.image.url}}">Copy Image Link</a></p>
+             <button type="button"  class="btn btn-primary"><a href="{% url 'search_results'%}" style="color:white;">view</a></button>
+                      Location: <p class="card-text" >{{galleries.location}}</p>
+                       Category:<p class="card-text">{{galleries.category}}</p>
+                       posted:<p class="card-text">{{galleries.posted_time}}</p>
 
         </div>
       </div>
