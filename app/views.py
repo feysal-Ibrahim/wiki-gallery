@@ -11,12 +11,13 @@ def home(request):
     # gallery=Image.get_all()
     images=Image.objects.filter( ).order_by( 'location' )
     # images=Image.objects.all()
-    locations=Location.objects.all( )
+    loct=Location.objects.all( )
+
     categories=Category.objects.all( )
 
     date=dt.date.today
     return render( request , 'welcome.html' ,
-                   {"date": date , "images": images,"locations":locations,"categories":categories} )
+                   {"date": date , "images": images,"loct":loct,"categories":categories} )
 
 
 def about(request):
@@ -41,17 +42,20 @@ def search_results(request):
         return render( request , 'search.html' , {"message": message} )
 
 
-def location(request , location):
-    images=Image.filter_by_location( location )
-    location=Location.objects.get( pk=location )
-    locations=Location.objects.all( )
+def location(request , location_id):
+    load =Location.objects.get(name=location_id)
+    location=Image.objects.filter(location=load.id)
+    lock=Location.objects.all()
+    loct=Location.objects.all( )
     return render( request , 'location.html' ,
-                   {"images": images , "locations": locations , "location": location} )
+                   {"location": location , "lock": lock,"loct":loct} )
 
 
 def category(request , category):
     images=Image.filter_by_category( category )
     category=Category.objects.get( pk=category )
     categories=Category.objects.all( )
+    loct=Location.objects.all( )
+
     return render( request , 'location.html' ,
-                   {"images": images , "categories": categories , "category": category} )
+                   {"images": images , "categories": categories , "category": category,"loct":loct} )

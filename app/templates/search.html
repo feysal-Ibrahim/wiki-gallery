@@ -17,15 +17,14 @@
      <br>
 
      {% if category %} {% for category in category %}
-      <div class="row">
-    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 ">
+    <div class="col-xs-12 col-sm-3 col-md-12 col-lg-3 ">
         <div class="card">
         <a href="#" class="thumbnail">
         <img data-toggle="modal" src="{{ category.image.url }}" class="img-responsive">
         </a>
              {% empty %}
         <div class="row">
-            <h2 class="text-center">DONT WORRY I AM  ARE ALSO FEELING</h2>
+            <h2 class="text-center">DONT WORRY I AM   ALSO FEELING</h2>
         </div>
     </div>
             {% endfor %} {% endif %}
@@ -34,27 +33,7 @@
         </div>
 </div>
 <style>
-   .thumbnail img{
-    position: relative;
-    width:  300px;
-    height: 300px;
-    background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     cover;
-     border: 1px solid yellow;
-      background: orange;
-}
-    .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
 
-    .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-    .container {
-    padding: 2px 16px;
-}
 
 
 </style>

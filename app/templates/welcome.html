@@ -2,8 +2,18 @@
 
 {% block content %}
 {{block.super}}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <div class="container">
+
     <div class="row">
 
     {% for galleries in images %}
@@ -11,14 +21,14 @@
 
          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 ">
               <div class="card">
-        <a href="#" class="thumbnail">
+        <a href="" class="thumbnail">
     <img id="myImg" src="{{galleries.image.url}}" alt="Preety" style="width:100%;max-width:300px">
 
         </a>
                    <div class="card-body">
           <p class="card-text">{{galleries.description}}</p>
-          <input class="form-control" type="text" value="{{galleries.image_url}}" id="link">
-          <p> <a class="btn btn-sm btn-success" href="#" data-clipboard-text="http://localhost:8000{{image.image.url}}">Copy Image Link</a></p>
+          <input class="form-control" type="text" id="copy"  value="http:127.0.0.1:8000{{galleries.image.url}}">
+          <p> <a class="btn btn-sm btn-success" onclick="myFunction()">Copy Image Link</a></p>
              <button type="button"  class="btn btn-primary"><a href="{% url 'search_results'%}" style="color:white;">view</a></button>
                        <br>
                       Location: <p class="card-text" >{{galleries.location}}</p>
@@ -155,26 +165,14 @@
 
 </style>
 <script>
-// Get the modal
-var modal = document.getElementById('myModal');
+ function myFunction() {
+   var text = document.getElementById("copy");
+   text.select();
+   document.execCommand("copy");
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById('myImg');
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-}
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
+   var tooltip = document.getElementById("myTooltip");
+   alert("Copied succesfully " );
+ }
 </script>
 
 {% endblock %}
