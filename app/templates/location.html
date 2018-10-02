@@ -1,278 +1,62 @@
 {%extends 'base.html'%}
 {% block content %}
 {{block.super}}
-
 <div class="container">
 
     <div class="row">
 
-{% for locations in location %}
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 ">
-              <div class="card">
-        <a href="" class="thumbnail">
-<img id="myImg" src="{{locations.image.url}}" style="width:100%;max-width:300px>
+    {% for locations in location %}
+         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 ">
+
+      <div class="modal fade" id="myModal-{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">{{ locations.image_name }}</h4>
+          </div>
+           <div class="card">
+        <a href="#" class="thumbnail">
+            <img src="{{locations.image.url}}" alt="{{ locations.image_name }}">
         </a>
-    <div class=" ">
-          <p class="card-text">{{locations.description}}</p>
-          <input class="form-control" type="text" id="copy"  value="http:127.0.0.1:8000{{locations.image.url}}">
-          <p> <a class="btn btn-sm btn-success" onclick="myFunction()">Copy Image Link</a></p>
-             <button type="button"  class="btn btn-primary"><a href="{% url 'search_results'%}" style="color:white;">view</a></button>
-                       <br>
-                      Location: <p class="card-text" >{{locations.location}}</p>
-                       Category:<p class="card-text">{{locations.category}}</p>
-                       posted:<p class="card-text">{{locations.posted_time}}</p>
+          </div>
+           <div class="container">
+            <p>Image Details</p>
+              <p>{{locations.description}}</p>
+            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
 
+          </div>
         </div>
-
       </div>
     </div>
+
+      <div class="col-md-3">
+
+           <div class="hovereffect thumbnail">
+              <img class="img-responsive" src="{{locations.image.url}}" alt="">
+              <div class="overlay">
+                 <h2>{{ locations.image_name }}</h2>
+                <button> <a class="info" href="#" data-toggle="modal" data-target="#myModal-{{image.id}}">View details</a></button>
+              </div>
+          </div>
+           <input class="form-control" type="text" id="copy"  value="http:127.0.0.1:8000{{locations.image.url}}">
+          <p> <a class="btn btn-sm btn-success" onclick="myFunction()">Copy Image Link</a></p>
+
+      </div>
+    {%endfor%}
+
+    </div>
 </div>
- {% empty %}
-        <div class="row">
-            <h2 class="text-center">DONT WORRY I AM   ALSO FEELING</h2>
-        </div>
-<style>
-   .thumbnail img{
-    position: relative;
-    width:  300px;
-    height: 300px;
-    background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     cover;
-     border: 1px solid yellow;
-      background: orange;
-}
-    .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
+    <script>
+ function myFunction() {
+   var text = document.getElementById("copy");
+   text.select();
+   document.execCommand("copy");
 
-    .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-    .container {
-    padding: 2px 16px;
-}
-/* Style the Image Used to Trigger the Modal */
-#myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#myImg:hover {opacity: 0.7;}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-/* Modal Content (Image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-
-
-</style>
-{% endfor %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="container">
-
-    <!--<div class="row">-->
-      <!--{%if location%}-->
-
-        <!--<h2>Location: {{location.location}}</h2>-->
-        <!--<hr>-->
-        <!--{%else%}-->
-           <!--<h2>Category: {{category.category}}</h2>-->
-           <!--<hr>-->
-        <!--{%endif%}-->
-
-    <!--</div>-->
-
-    <!--div class="row">-->
-      <!--{%if images%}-->
-
-    <!--{%for image in images%}-->
-         <!--<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 ">-->
-
-      <!--<div class="modal fade" id="myModal-{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
-      <!--<div class="modal-dialog" role="document">-->
-        <!--<div class="modal-content">-->
-          <!--<div class="modal-header">-->
-            <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
-            <!--<h4 class="modal-title" id="myModalLabel">{{ image.image_name }}</h4>-->
-          <!--</div>-->
-           <!--<div class="card">-->
-        <!--<a href="#" class="thumbnail">-->
-            <!--<img src="{{image.image.url}}" alt="{{ image.image_name }}">-->
-        <!--</a>-->
-          <!--</div>-->
-           <!--<div class="container">-->
-            <!--<p>Image Details</p>-->
-               <!--<p>{{image.image_name}}</p>-->
-              <!--<p>{{image.description}}</p>-->
-               <!--image location:<p>{{image.location}}</p>-->
-               <!--image category:<p>{{image.category}}</p>-->
-               <!--posted on:<p>{{image.posted_time}}</p>-->
-
-
-            <!--</div>-->
-          <!--<div class="modal-footer">-->
-            <!--<button type="button" class="btn btn-success" data-dismiss="modal">Close</button>-->
-
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-
-         <!--<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 ">-->
-
-           <!--<div class="hovereffect thumbnail">-->
-              <!--<img class="img-responsive" src="{{image.image.url}}" alt="">-->
-              <!--<div class="overlay">-->
-                 <!--<h2>{{ image.image_name }}</h2>-->
-                <!--<button> <a class="btn btn-sm btn-primary"  href="#" data-toggle="modal" data-target="#myModal-{{image.id}}">View image  details</a></button>-->
-              <!--</div>-->
-          <!--</div>-->
-            <!--<p> <a class="btn btn-sm btn-success" href="#" data-clipboard-text="http://localhost:8000{{image.image.url}}">Copy Image Link</a></p>-->
-
-      <!--</div>-->
-    <!--{%endfor%}-->
-    <!--{%else%}-->
-      <!--{%if location%}-->
-        <!--<h2>No Images in this location yet!</h2>-->
-      <!--{%else%}-->
-        <!--<h2>No Images in this category yet!</h2>-->
-      <!--{%endif%}-->
-    <!--{%endif%}-->
-
-    <!--</div>-->
-<!--</div>-->
-<!--</div><-->
-<style>
-   .thumbnail img{
-    position: relative;
-    width:  300px;
-    height: 300px;
-    background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     cover;
-     border: 1px solid yellow;
-      background: orange;
-}
-    .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-
-    .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-    .container {
-    padding: 2px 16px;
-}
-/* Style the Image Used to Trigger the Modal */
-#myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-/* Modal Content (Image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-}
-
-/* Add Animation - Zoom in the Modal */
-.modal-content, #caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-}
-
-/* The Close Button */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
-    }
-}
-
-</style>
+   var tooltip = document.getElementById("myTooltip");
+   alert("Copied succesfully " );
+ }
+</script>
 {% endblock %}
