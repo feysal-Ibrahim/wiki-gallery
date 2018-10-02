@@ -9,8 +9,8 @@ from peewee import DoesNotExist
 def home(request):
     # return render ( request , 'welcome.html')
     # gallery=Image.get_all()
-    # images=Image.objects.filter( ).order_by( 'location' )
-    images=Image.objects.all()
+    images=Image.objects.filter( ).order_by( 'location' )
+    # images=Image.objects.all()
     locations=Location.objects.all( )
     categories=Category.objects.all( )
 
