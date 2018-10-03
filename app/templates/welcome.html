@@ -17,22 +17,23 @@
     <div class="row">
 
     {% for galleries in images %}
+
+
         <!-- Trigger the Modal -->
 
          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 ">
               <div class="card">
         <a href="" class="thumbnail">
-    <img id="myImg" src="{{galleries.image.url}}" alt="Preety" style="width:100%;max-width:300px">
 
+             <h1>{{galleries.category}}</h1>
+
+    <img id="myImg" src="{{galleries.image.url}}" alt="{{galleries.description}}" style="width:100%;max-width:300px">
         </a>
                    <div class="card-body">
           <p class="card-text">{{galleries.description}}</p>
-          <input class="form-control" type="text" id="copy"  value="http:127.0.0.1:8000{{galleries.image.url}}">
-          <p> <a class="btn btn-sm btn-success" onclick="myFunction()">Copy Image Link</a></p>
-             <button type="button"  class="btn btn-primary"><a href="{% url 'search_results'%}" style="color:white;">view</a></button>
-                       <br>
+          <input class="form-control" type="text" id="copy"  value="https://feysal-gallery.herokuapp.com{{galleries.image.url}}">
+          <p> <a class="btn btn-sm btn-success" onclick="myFunction()">Copy Image Link</a></p><br>
                       Location: <p class="card-text" >{{galleries.location}}</p>
-                       Category:<p class="card-text">{{galleries.category}}</p>
                        posted:<p class="card-text">{{galleries.posted_time}}</p>
 
         </div>
@@ -57,6 +58,7 @@
         </div>
     </div>
     {% endfor %}
+
 
   </div>
 </div>
