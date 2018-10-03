@@ -1,6 +1,6 @@
 # **Wiki Gallery**
 ## Author
-**_`FEYSAL IBRAHIM`_**
+* [Feysal-Ibrahim](https://github.com/feysal-Ibrahim)
 ## Link To The Deployed Site
 Here is the link:https://feysal-gallery.herokuapp.com/
 ## Description
